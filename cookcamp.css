@@ -1,0 +1,279 @@
+/* body */
+body{
+margin: 0;
+background-color: #f5f5dd;
+width: 100%;
+}
+
+/* header */
+header{
+border-bottom: solid 1px #664433;
+background-color: #ffffff;
+}
+.header-contents{
+    /* width: 960px; */
+    margin: 0 auto;
+}
+.icon{
+    background-color:#99bb22;
+}
+
+.logo{
+    float: left;
+    padding: 10px;
+}
+header p{
+    margin-top: 0;
+}
+.search{
+    float: right;
+    padding: 10px;
+}
+
+header ul{
+    list-style: none;
+    clear: both;
+    display: flex;
+}
+header li{
+    flex: 1;
+    text-align: center;
+}
+header li + li{
+    border-left:solid 1px #cccccc;
+}
+header a{
+    text-decoration: none;
+    display: block;
+    width: 100%;
+}
+
+header, a{
+    color: #664433;
+}
+
+
+/* contents */
+.contents{
+    width: 960px;
+    position: relative;
+    margin: 0 auto;
+}
+
+.mainview img{
+    width: 100%;
+}
+article{
+    background-color: #ffffff;
+}
+.washoku{
+    height: 100%;
+}
+.push{
+    height: 100%;
+}
+
+article p{
+    background-color: #99bb22;
+    padding: 10px;
+    border-radius:20px ;
+    color: #ffffff;
+    margin: 10px;
+}
+.contents-center{
+    margin-bottom: 10px;
+}
+.article-top{
+    padding:5px 10px 10px 10px;
+    
+}
+.article-top a{
+    display: block;
+    text-decoration: none;
+    color: #000000;
+    
+}
+.article-top ul{
+    display: flex;
+    list-style-type: none;
+}
+.article-top li{
+    flex: 1;
+    text-align: center;
+    font-size: 10px;
+}
+.article-top li img{
+    width: 80%;
+}
+h1{
+    font-size: 14px;
+    font-weight: lighter;
+}
+.article-center{
+    margin-bottom: 20px;
+    padding:5px 10px 10px 10px;
+    
+}
+.article-center-text{
+    display: flex;
+    padding: 20px;
+
+}
+.article-center-text img{
+    flex: 1;
+}
+.article-center-text h1{
+    flex: 2;
+    padding: 0 20px;
+    margin: 0;
+    display: inline;
+}
+.article-bottom-text h1{
+    flex: 2;
+    padding: 0 20px;
+    margin: 0;
+}
+article a{
+    text-decoration: none;
+    float: right;
+    color: #fc8833;
+}
+.article-bottom{
+    padding:5px 10px 10px 10px;
+}
+.article-bottom span{
+    color: #664433;
+    font-weight: bold;
+}
+.article-bottom-text{
+    display: flex;
+    padding: 20px;
+
+}
+.article-bottom-text img{
+    flex: 1;
+}
+.article-bottom-text h1{
+    flex: 2;
+    padding: 0 20px;
+    margin: 0;
+}
+.article-top{
+    margin-bottom: 10px;
+}
+
+
+
+    /* nav */
+nav{
+    background-color: #ffffff;
+    padding:5px 10px 0 10px;
+}
+.nav-top{
+    margin-bottom: 10px;
+}
+nav p{
+    background-color: #99bb22;
+    /* display: inline; */
+    padding: 10px;
+    border-radius:20px ;
+    color: #ffffff;
+    text-align: center;
+    
+}
+nav ul{
+    list-style-type: none;
+    padding-inline-start: 0;
+}
+nav li{
+    width: 100%;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+nav li + li{
+    border-top: 1px dotted #000000;
+}
+nav a{
+    text-decoration: none;
+    display: block;
+}
+/* aside */
+aside{
+    background-color: #ffffff;
+    /* margin: 0 auto; */
+}
+.aside-top{
+    margin-bottom: 10px;
+}
+
+/* footer */
+footer{
+    text-align: center;
+    background-color: #ffffff;
+    width: 100%;
+    border-top: solid 1px #cccccc;
+}
+.footer-contents{
+    margin: 0 auto;
+    /* width: 960px; */
+    padding-bottom: 20px;
+}
+footer ul{
+    list-style-type: none;
+    display: flex;
+}
+footer a{
+    text-decoration: none;
+}
+footer li{
+    flex: 1;
+}
+footer li + li{
+    border-left: solid 1px #cccccc;
+}
+
+footer p{
+    margin-bottom: 0;
+}
+/* flex */
+.contents-container{
+    display: flex;
+    margin: 0 auto;
+}
+.contents-left{
+    flex: 1;
+    margin-top: 10px;
+}
+.contents-center{
+    flex: 4;
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-top: 10px;
+
+}
+.contents-right{
+    flex: 1;
+    margin: 0 auto;
+    margin-top: 10px;
+}
+
+.head-contents{
+    width: 960px;
+    margin: 0 auto;
+}
+.arrow{
+    padding-right: 5px;
+}
+
+@media screen and (max-width: 960px) {
+    .head-contents{
+        width: 960px;
+        margin: 0 auto;
+    }
+  }
+  @media screen and (min-width: 961px) {
+    .head-contents{
+        width: 100%;
+        margin: 0 auto;
+    }
+  }

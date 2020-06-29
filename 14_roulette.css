@@ -1,0 +1,33 @@
+td{
+    border: 1px solid #000000;
+    padding: 50px;
+}
+table{
+    border: 1px solid #000000;
+}
+#roulette{
+    width: 500px;
+    height: 500px;
+    margin: 0 auto;
+    text-align: center;
+}
+#t1{
+    margin: 0 auto;
+}
+#button-wrapper{
+    margin: 20px;
+    display: flex;
+}
+.button{
+    flex: 1;
+    margin-right: 10px;
+    padding: 10px;
+}
+.selected{
+    background:red;
+}
+.hold-color{
+    background:orange;
+    opacity: 0.8;
+    color: gray;
+}

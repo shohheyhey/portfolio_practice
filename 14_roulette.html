@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="14_roulette.css">
+    <script src="jquery-3.4.1.min.js"></script>
+    <script>
+        $(function(){
+            var a = "";
+            var b = "";
+            var interval_id;
+            var idx;
+            var numArray;
+            for(var i=0; i<4; i++){
+                for(var j=0; j<4; j++){
+                    a +=  "<td>" + (i*4 + j+1) + "</td>";
+                }
+                b += "<tr>" + a + "</tr>"
+                a = "";
+            }
+            $("#t1").html(b);
+            function reset_array(){
+                numArray = new Array();
+                for(var i=0; i<16; i++){
+                    numArray.push(i);
+                }
+                $("#stop").prop("disabled", true);
+            }
+            reset_array();
+            function start_roulette(){
+                    interval_id = setInterval(random_display, 100);
+                    $("#start").prop("disabled", true);
+                    $("#stop").prop("disabled", false);
+            }
+            function random_display(){
+                $("td").eq(idx).removeClass("selected");
+                idx = numArray[Math.floor(Math.random()*numArray.length)];
+                $("td").eq(idx).addClass("selected");
+
+            }
+            function stop_roulette(){
+                clearInterval(interval_id);
+                $("#stop").prop("disabled", true);
+                $("#start").prop("disabled", false);
+                $("#reset").prop("disabled", false);
+                if(numArray.length === 1 ){
+                    $("#start").prop("disabled", true);
+                }else{
+                        $(" td").eq(idx).addClass("hold-color");
+                        
+                        numArray.splice(numArray.indexOf(idx), 1);
+                    }
+                console.log(numArray);
+            }
+            function reset_roulette(){
+                clearInterval(interval_id);
+                $("td").removeClass("selected");
+                $("td").removeClass("hold-color");
+                reset_array();
+                $("#start").prop("disabled", false);
+            }
+            $("#start").click(start_roulette);
+            $("#stop").click(stop_roulette);
+            $("#reset").click(reset_roulette);
+        });
+    </script>
+</head>
+<body>
+    <div id="roulette">
+        <div id="display-wrapper">
+            <table id="t1"><tbody></tbody></table>
+        </div>
+        <div id="button-wrapper">
+            <button class="button" id="start">スタート</button>
+            <button class="button" id="stop">ストップ</button>
+            <button class="button" id="reset">リセット</button>
+        </div>
+    </div>
+</body>
+</html>
